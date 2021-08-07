@@ -1,18 +1,16 @@
-
 import React from 'react';
 import {
-  SafeAreaView,
   StyleSheet,
-  Text,
-  View,
 } from 'react-native';
-
 import RootNavigator from './navigation/RootNavigator';
-
+import { Provider } from 'react-redux';
+import { store } from './store/rootStore';
 const App = () => {
 
   return (
-    <RootNavigator />
+    <Provider store={store}>
+      <RootNavigator />
+    </Provider>
   );
 };
 
