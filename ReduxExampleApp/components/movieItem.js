@@ -27,13 +27,15 @@ const MovieItem = (props) => {
                             {props.item.vote_count}
                         </Text>
                         <TouchableOpacity
-                            onPress={() => console.log('Added!')}
+                            onPress={(props.isFav) ?
+                                props.removeFromFavorites.bind(this, props.item) :
+                                props.addToFavorites.bind(this, props.item)}
                             activeOpacity={0.7}
                             style={styles.favouriteTouchable}>
                             <MaterialIcons
                                 color="orange"
                                 size={32}
-                                name="favorite-outline"
+                                name={(props.isFav) ? 'favorite' : 'favorite-outline'}
                             />
                         </TouchableOpacity>
                     </View>

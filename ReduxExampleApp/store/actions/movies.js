@@ -28,3 +28,16 @@ export const getMovies = () => {
 
     }
 }
+
+export const addFavorite = movie => dispatch => {
+    dispatch({
+        type: ADD_FAVORITE_ITEM,
+        payload: movie,
+    });
+};
+export const removeFavorite = movie => dispatch => {
+    dispatch({
+        type: REMOVE_FAVORITE_ITEM,
+        payload: movie,
+    });
+};
