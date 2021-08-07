@@ -13,13 +13,12 @@ export const getMovies = () => {
     try {
 
         return async dispatch => {
-            const res = await fetch(`${BASE_URL}`);
-
-            if (res.data) {
-                console.log(res.data.results);
+            const res = await fetch(BASE_URL);
+            const json = await res.json();
+            if (json) {
                 dispatch({
                     type: GET_MOVIES,
-                    payload: res.data.results,
+                    payload: json.results,
                 });
             } else {
                 console.log('Unable to fetch');
