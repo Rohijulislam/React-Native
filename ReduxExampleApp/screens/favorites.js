@@ -1,7 +1,6 @@
 import React from 'react';
-import { Text, View, FlatList, TouchableOpacity, Image, StyleSheet } from 'react-native';
+import { Text, View, FlatList, StyleSheet } from 'react-native';
 import { useSelector, useDispatch } from 'react-redux';
-import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
 import { removeFavorite } from '../store/actions/movies';
 import MovieItem from '../components/movieItem';
 
