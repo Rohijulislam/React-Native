@@ -15,7 +15,7 @@ const Favorites = () => {
 
     return (
         <View style={styles.container}>
-            <Text style={{ fontSize: 22 }}>Favorites</Text>
+            <Text style={styles.title}>Favorites</Text>
             <View style={styles.inner}>
                 {favorites.length === 0 ? (
                     <Text style={styles.emptyFavText}>
