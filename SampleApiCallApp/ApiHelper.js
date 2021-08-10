@@ -2,7 +2,7 @@ import axios from 'axios';
 
 const BaseUrl = "https://jsonplaceholder.typicode.com";
 export const BaseUrlAlt = axios.create({
-    baseURL: `http://jsonplaceholder.typicode.com/`
+    baseURL: `https://jsonplaceholder.typicode.com/`
 });
 const ApiCallDefaultTimeout = 1000; // in ms
 
